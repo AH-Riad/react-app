@@ -1,4 +1,4 @@
-// import { MouseEvent } from "react";
+import { MouseEvent } from "react";
 function ListGroup() {
   <h1>List Group</h1>;
   let items = [
@@ -10,8 +10,9 @@ function ListGroup() {
     "Mymenshing",
     "Shylet",
   ];
-  //event handler
-  // const handleClick = (event: MouseEvent) => console.log(event);
+  //Event handler
+  const handleClick = (event: MouseEvent) => console.log(event);
+  const selectedIndex = 2;
 
   return (
     <>
@@ -19,11 +20,15 @@ function ListGroup() {
       {/* condition rendering */}
       {items.length === 0 && <p>No item found</p>}
       <ul className="list-group">
-        {items.map((item) => (
+        {items.map((item, index) => (
           <li
-            className="list-group-item"
+            className={
+              selectedIndex === index
+                ? "list-group-item active"
+                : "list-group-item"
+            }
             key={item}
-            onClick={(event) => console.log(event)}
+            onClick={handleClick}
           >
             {item}
           </li>
