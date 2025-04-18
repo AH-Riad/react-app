@@ -1,6 +1,6 @@
-import Alert from "./components/Alert";
-
+// import Alert from "./components/Alert";
 // import ListGroup from "./components/ListGroup";
+import Button from "./components/Button";
 function App() {
   // let items = [
   //   "Rangpur",
@@ -14,11 +14,16 @@ function App() {
   // const handleSelectItem = (item: string) => {
   //   console.log(item);
 
+  // return (
+  //   <div>
+  //     <Alert>
+  //       <span>Hello World!</span>
+  //     </Alert>
+  //   </div>
+  // );
   return (
     <div>
-      <Alert>
-        <span>Hello World!</span>
-      </Alert>
+      <Button />
     </div>
   );
 }
