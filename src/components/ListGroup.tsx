@@ -5,9 +5,10 @@ import { useState } from "react";
 interface Props {
   items: string[];
   heading: string;
+  onselectItem: (item: string) => void;
 }
 
-function ListGroup({ items, heading }: Props) {
+function ListGroup({ items, heading, onselectItem }: Props) {
   <h1>List Group</h1>;
 
   //Event handler
@@ -28,7 +29,10 @@ function ListGroup({ items, heading }: Props) {
                 : "list-group-item"
             }
             key={item}
-            onClick={() => setSelectedIndex(index)}
+            onClick={() => {
+              setSelectedIndex(index);
+              onselectItem(item);
+            }}
           >
             {item}
           </li>

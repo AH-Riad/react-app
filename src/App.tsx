@@ -9,9 +9,16 @@ function App() {
     "Mymenshing",
     "Shylet",
   ];
+  const handleSelectItem = (item: string) => {
+    console.log(item);
+  };
   return (
     <div>
-      <ListGroup items={items} heading="Divisions" />
+      <ListGroup
+        items={items}
+        heading="Divisions"
+        onselectItem={handleSelectItem}
+      />
     </div>
   );
 }
