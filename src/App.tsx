@@ -23,7 +23,7 @@ function App() {
   // );
   return (
     <div>
-      <Button>My Button</Button>
+      <Button OnClick={() => console.log("Clicked")}>My Button</Button>
     </div>
   );
 }
